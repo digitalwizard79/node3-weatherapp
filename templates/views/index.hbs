@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="css/styles.css">        
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}            
+            <p>Use this site to get your weather. Enter a zip code or city.</p>
+
+            <form>
+                <input placeholder="Location" />
+                <button>Search</button>
+            </form>
+
+            <p id="loading"></p>
+
+            <div id="weatherData" class="weatherData" style="display: none"></div>
+                <p id="location"></p>
+                <img src="" id="weatherImg" /> <span id="description"></span>
+
+                <ul>
+                    <li><label id="tempLabel"></label><span id="temperature"></span></li>
+                    <li><label id="precipLabel"></label><span id="precipitation"></span></li>
+                    <li><label id="windLabel"></label><span id="wind_speed"></span></li>
+                </ul>
+
+                <p id="error"></p>
+            </div>            
+        </div>
+        
+        {{>footer}}
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
